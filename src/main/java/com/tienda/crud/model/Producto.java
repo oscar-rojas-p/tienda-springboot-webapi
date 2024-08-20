@@ -11,6 +11,7 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
+    private Long stock;
     private Double precio;
 
     public Long getId() {
@@ -23,6 +24,14 @@ public class Producto {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public Long getStock() {
+        return stock;
+    }
+
+    public void setStock(Long stock) {
+        this.stock = stock;
     }
 
     public void setNombre(String nombre) {

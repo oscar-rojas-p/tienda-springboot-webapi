@@ -14,7 +14,7 @@ public class ClienteService {
     private ClienteRepository clienteRepository;
 
     public List<Cliente> obtenerTodos() {
-        return clienteRepository.findAll();
+        return clienteRepository.findAllByOrderByIdAsc();
     }
 
     public Optional<Cliente> obtenerPorId(Long id) {
